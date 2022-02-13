@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 async function connection() {
   try {
+    console.log(`enviromentttttttttt: ${process.env.MONGODB_URI}`);
     await mongoose.connect(
       process.env.MONGODB_URI || "mongodb://localhost:27017/recipe_db",
       {
